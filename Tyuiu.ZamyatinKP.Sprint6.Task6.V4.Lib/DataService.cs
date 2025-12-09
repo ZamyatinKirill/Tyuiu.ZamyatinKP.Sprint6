@@ -7,7 +7,10 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task6.V4.Lib
         public string CollectTextFromFile(string path)
         {
             string text = File.ReadAllText(path);
-            var wordsWithN = text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Where(word => word.Contains('n', StringComparison.OrdinalIgnoreCase));
+            var wordsWithN = text
+            .Split(new char[] { ' ', '\n', '\r', '\t', ',', '.', '!', '?', ';', ':', '-', '(', ')', '[', ']', '{', '}' },
+                   StringSplitOptions.RemoveEmptyEntries)
+            .Where(word => word.Contains('n', StringComparison.OrdinalIgnoreCase));
 
             return string.Join(" ", wordsWithN);
         }
