@@ -17,19 +17,13 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task5.V6.Lib
 
                 foreach (string token in tokens)
                 {
-                    if (double.TryParse(token, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
+                    double number = double.Parse(token);
+
+                    if (number % 3 == 0)
                     {
-
-                        double roundedNumber = Math.Round(number, 3);
-
-                        double remainder = Math.Abs(number % 3);
-                        bool isMultipleOfThree = remainder < 0.001 || Math.Abs(remainder - 3) < 0.001;
-
-                        if (isMultipleOfThree)
-                        {
-                            multiplesOfThree.Add(number);
-                        }
+                        multiplesOfThree.Add(number);
                     }
+
                 }
             }
 
