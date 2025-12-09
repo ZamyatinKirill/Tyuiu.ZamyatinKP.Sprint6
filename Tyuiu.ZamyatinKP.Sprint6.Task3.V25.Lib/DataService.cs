@@ -8,28 +8,20 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task3.V25.Lib
         {
             int[,] result = (int[,])matrix.Clone();
 
-            int[][] rows = new int[5][];
+            int[] thirdColumn = new int[5];
             for (int i = 0; i < 5; i++)
             {
-                rows[i] = new int[5];
-                for (int j = 0; j < 5; j++)
-                {
-                    rows[i][j] = result[i, j];
-                }
+                thirdColumn[i] = result[i, 2];
             }
 
-            Array.Sort(rows, (row1, row2) => row1[2].CompareTo(row2[2]));
+            Array.Sort(thirdColumn);
 
             for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 5; j++)
-                {
-                    result[i, j] = rows[i][j];
-                }
+                result[i, 2] = thirdColumn[i];
             }
 
             return result;
-
         }
     }
 }
