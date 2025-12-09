@@ -10,12 +10,12 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task7.V18.Lib
 
             int rows = lines.Length;
 
-            string[] firstLineValues = lines[0].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string[] firstLineValues = lines[0].Split(new char[] { ' ', ',', ';', '\t' }, StringSplitOptions.RemoveEmptyEntries);
             int cols = firstLineValues.Length;
 
             for (int i = 1; i < rows; i++)
             {
-                string[] currentValues = lines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] currentValues = lines[i].Split(new char[] { ' ', ',', ';', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 if (currentValues.Length != cols)
                 {
                     throw new FormatException($"Строка {i + 1} содержит {currentValues.Length} значений, ожидалось {cols}");
@@ -26,7 +26,7 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task7.V18.Lib
 
             for (int i = 0; i < rows; i++)
             {
-                string[] values = lines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] values = lines[i].Split(new char[] { ' ', ',', ';', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 for (int j = 0; j < cols; j++)
                 {
                     if (int.TryParse(values[j].Trim(), out int value))
