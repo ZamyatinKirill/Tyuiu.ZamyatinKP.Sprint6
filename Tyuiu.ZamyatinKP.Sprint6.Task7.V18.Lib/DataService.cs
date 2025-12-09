@@ -7,13 +7,13 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task7.V18.Lib
         public int[,] GetMatrix(string path)
         {
             string[] lines = File.ReadAllLines(path);
-            int rows = 10;
-            int cols = 10;
+            int rows = 11;
+            int cols = 11;
             int[,] matrix = new int[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
-                string[] values = lines[i].Split(',');
+                string[] values = lines[i].Split(' ');
                 for (int j = 0; j < cols; j++)
                 {
                     if (int.TryParse(values[j].Trim(), out int value))
