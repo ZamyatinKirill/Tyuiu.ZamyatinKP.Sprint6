@@ -20,7 +20,7 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task1.V21.Lib
                 }
                 else
                 {
-                    functionValue = Math.Cos(x) + Math.Sin(x) / (2 - 2 * x) - 4;
+                    functionValue = Math.Cos(x) + Math.Sin(x) / (2 - 2 * x) - 4 * x;
                 }
 
                 results[i] = Math.Round(functionValue, 2);
