@@ -10,7 +10,7 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task6.V4.Lib
             var wordsWithN = text
             .Split(new char[] { ' ', '\n', '\r', '\t', ',', '.', '!', '?', ';', ':', '-', '(', ')', '[', ']', '{', '}' },
                    StringSplitOptions.RemoveEmptyEntries)
-            .Where(word => word.Contains('n', StringComparison.OrdinalIgnoreCase));
+            .Where(word => word.Contains('n'));
 
             return string.Join(" ", wordsWithN);
         }
