@@ -14,13 +14,13 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task4.V23.Lib
                 int x = startValue + i;
                 double functionValue;
 
-                if (2 * x - 2 == 0)
+                if ((2 * x - 2) == 0)
                 {
                     functionValue = 0;
                 }
                 else
                 {
-                    functionValue = 4 - 2 * x + (2 + Math.Cos(x)) / (2 * x + 2);
+                    functionValue = (2 + Math.Cos(x)) / (2*x - 2) - 2*x + 4;
                 }
 
                 results[i] = Math.Round(functionValue, 2);
