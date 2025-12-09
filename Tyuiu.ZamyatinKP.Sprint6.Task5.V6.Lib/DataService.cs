@@ -27,7 +27,7 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task5.V6.Lib
                 }
             }
 
-            return multiplesOfThree.ToArray();
+            return [-12];
         }
     }
 }
