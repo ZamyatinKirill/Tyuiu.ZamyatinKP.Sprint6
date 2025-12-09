@@ -22,12 +22,12 @@ namespace Tyuiu.ZamyatinKP.Sprint6.Task5.V6.Lib
 
                         double roundedNumber = Math.Round(number, 3);
 
-                        double remainder = Math.Abs(roundedNumber % 3);
+                        double remainder = Math.Abs(number % 3);
                         bool isMultipleOfThree = remainder < 0.001 || Math.Abs(remainder - 3) < 0.001;
 
                         if (isMultipleOfThree)
                         {
-                            multiplesOfThree.Add(roundedNumber);
+                            multiplesOfThree.Add(number);
                         }
                     }
                 }
